@@ -456,7 +456,9 @@
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
                         <div id="success"></div>
-                        <form onsubmit="sendEmail()">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                         <input type="hidden" name="access_key" value="8b8256f8-4709-45e2-8a66-ea26ef3a06c5">
+
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
@@ -534,31 +536,31 @@
    <!-- <script src="mail/contact.js"></script> -->
 <script>
 
-function sendEmail(){
+// function sendEmail(){
 
-   Email.send({
+//    Email.send({
        
-  SecureToken : "df785594-d001-4ea5-aa06-cea97f93bc2d",
+//   SecureToken : "df785594-d001-4ea5-aa06-cea97f93bc2d",
 
-    To : 'karnakshetri7@gmail.com',
-    From : "info@karnakshetri.com.np",
-    ReplyFrom : document.getElementById('email').value,
-    Subject : document.getElementById('subject').value ,
-    Body : '<b>Name:</b> '+document.getElementById('name').value  + '<br/> <b>Email:</b> '+document.getElementById('email').value  + 
-    '<br/> <b>Subject:</b> '+document.getElementById('subject').value  + '<br/> <b>Message:</b> '+document.getElementById('message').value 
+//     To : 'karnakshetri7@gmail.com',
+//     From : "info@karnakshetri.com.np",
+//     ReplyFrom : document.getElementById('email').value,
+//     Subject : document.getElementById('subject').value ,
+//     Body : '<b>Name:</b> '+document.getElementById('name').value  + '<br/> <b>Email:</b> '+document.getElementById('email').value  + 
+//     '<br/> <b>Subject:</b> '+document.getElementById('subject').value  + '<br/> <b>Message:</b> '+document.getElementById('message').value 
 
-}).then((message) => {
-        if(message == "OK"){
-            Swal.fire({
-                title: "Successfull !",
-                text: "Message sent successfully!",
-                icon: "success"
-              });
-        }
-    });
+// }).then((message) => {
+//         if(message == "OK"){
+//             Swal.fire({
+//                 title: "Successfull !",
+//                 text: "Message sent successfully!",
+//                 icon: "success"
+//               });
+//         }
+//     });
 
 
-}
+// }
 
 </script>
 
